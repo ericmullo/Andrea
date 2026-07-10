@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El misterio de la palabra</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<audio id="musicaSobre" preload="auto">
+    <source src="videoplayback.weba" type="audio/webm">
+</audio>
+<body>
+    <main class="contenedor">
+        <section id="pantallaInicio" class="pantalla activa">
+            <div class="tarjeta">
+                <div class="icono">🔮</div>
+                <h1>El misterio de la palabra</h1>
+                <p>Responde seis preguntas y descubre la palabra secreta.</p>
+                <input id="nombreJugador" type="text" placeholder="Escribe tu nombre">
+                <button id="botonIngresar">Comenzar aventura</button>
+                <p id="mensajeInicio" class="mensaje"></p>
+            </div>
+        </section>
+
+        <section id="pantallaPreguntas" class="pantalla">
+            <div class="tarjeta tarjeta-juego">
+                <div class="cabecera">
+                    <span id="saludoJugador"></span>
+                    <span id="numeroPregunta">Pregunta 1 de 5</span>
+                </div>
+
+                <div class="barra">
+                    <div id="barraProgreso" class="barra-progreso"></div>
+                </div>
+
+                <h2 id="textoPregunta">Cargando pregunta...</h2>
+                <div id="contenedorOpciones" class="opciones"></div>
+                <p id="mensajePregunta" class="mensaje"></p>
+
+                <div class="palabra">
+                    <span class="letra">_</span>
+                    <span class="letra">_</span>
+                    <span class="letra">_</span>
+                    <span class="letra">_</span>
+                    <span class="letra">_</span>
+                    <span class="letra">_</span>
+                </div>
+
+                <div id="zonaPalabra" class="zona-palabra bloqueada">
+                    <h3>Escribe la palabra secreta</h3>
+                    <input id="palabraJugador" type="text" maxlength="6" disabled>
+                    <button id="botonComprobar" disabled>Comprobar palabra</button>
+                    <p id="mensajePalabra" class="mensaje"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pantallaVictoria" class="pantalla">
+            <div class="tarjeta victoria">
+                <div class="icono">🏆</div>
+                <h1>¡Lo lograste!</h1>
+                <p id="textoVictoria"></p>
+                <div class="palabra-final">CANELA</div>
+                <button onclick="location.reload()">Jugar nuevamente</button>
+            </div>
+        </section>
+    </main>
+
+<section id="pantallaSobres" class="pantalla pantalla-sobres">
+
+    <div class="contenido-sobres">
+
+        <h1>💕 Elige un sobre 💕</h1>
+
+        <div class="contenedor-sobres">
+
+           <button class="sobre" onclick="abrirSobre(this, 1)">
+    <span class="numero-sobre">1</span>
+
+    <span class="icono-sobre">💌</span>
+
+    <div class="contenido-sobre">
+        <img src="pizza.jpeg" alt="Recuerdo de pizza">
+    </div>
+</button>
+
+           <button class="sobre" onclick="abrirSobre(this, 2)">
+
+    <span class="numero-sobre">2</span>
+
+    <span class="icono-sobre">💌</span>
+
+    <div class="carta">
+        <h2>🎁 CUPÓN 🎁</h2>
+
+        <p>
+            Cupón válido para que me enseñes a jugar fútbol ⚽💗
+        </p>
+    </div>
+
+</button>
+
+<button class="sobre" onclick="abrirSobre(this, 3)">
+
+    <span class="numero-sobre">3</span>
+
+    <span class="icono-sobre">💌</span>
+
+    <div class="carta">
+
+        <h2>📸 CUPÓN 📸</h2>
+
+        <p>
+            Cupón válido para tomarnos una foto juntos 📷💕
+        </p>
+
+    </div>
+
+</button>
+            <button class="sobre" onclick="abrirSobre(this, 4)">
+                <span class="numero-sobre">4</span>
+
+    <span class="icono-sobre">💌</span>
+
+    <div class="carta">
+
+        <h2>📸 CUPÓN 📸</h2>
+
+        <p>
+            Cupón válido para unos Crepes :3 📷💕
+        </p>
+
+    </div>
+            </button>
+
+            <button class="sobre" onclick="abrirSobre(this, 5)">
+                <span class="numero-sobre">5</span>
+
+    <span class="icono-sobre">💌</span>
+
+    <div class="carta">
+
+        <h2>📸 CUPÓN 📸</h2>
+
+        <p>
+            Proximos recuerdos... :3 📷💕
+        </p>
+
+    </div>
+            </button>
+
+            <button class="sobre" onclick="abrirSobre(this, 6)">
+                <span class="numero-sobre">6</span>
+
+    <span class="icono-sobre">💌</span>
+
+    <div class="carta">
+
+        <h2>📸 CUPÓN 📸</h2>
+
+        <p>
+            Proximos recuerdos... :3 📷💕
+        </p>
+
+    </div>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <script src="juego.js"></script>
+</body>
+</html>
