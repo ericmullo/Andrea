@@ -194,3 +194,18 @@ function opcion2(event){
     alert("Elegiste la opción 2 💕");
 
 }
+function elegirOpcion(event, opcion){
+
+    event.stopPropagation();
+
+    if(opcion===1){
+
+        alert("Elegiste la opción 1");
+
+    }else{
+
+        alert("Elegiste la opción 2");
+
+    }
+
+}
