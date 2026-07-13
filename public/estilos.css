@@ -480,3 +480,41 @@ button:disabled {
 .sobre.abierto .carta {
     transform: translate(-50%, -22%);
 }
+
+.opciones{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.btn-opcion{
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#ef67ac,#9272e7);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-opcion:hover{
+
+    transform:scale(1.05);
+
+}

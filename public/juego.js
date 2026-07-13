@@ -178,3 +178,19 @@ musica.currentTime = 0;
 musica.play();
 
 }
+
+function opcion1(event){
+
+    event.stopPropagation();
+
+    alert("Elegiste la opción 1 💕");
+
+}
+
+function opcion2(event){
+
+    event.stopPropagation();
+
+    alert("Elegiste la opción 2 💕");
+
+}
