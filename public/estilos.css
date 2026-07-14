@@ -518,3 +518,398 @@ button:disabled {
     transform:scale(1.05);
 
 }
+
+/* Botón sorpresa */
+
+.boton-sorpresa {
+    position: fixed;
+    left: 30px;
+    bottom: 25px;
+
+    width: auto;
+    margin: 0;
+    padding: 14px 24px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    background: linear-gradient(135deg, #ef65ad, #9270e8);
+    border: none;
+    border-radius: 16px;
+
+    cursor: pointer;
+    z-index: 20;
+
+    box-shadow: 0 12px 25px rgba(114, 67, 140, 0.28);
+
+    transition: transform 0.3s ease;
+}
+
+.boton-sorpresa:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+
+/* Pantalla del libro */
+
+.pantalla-libro {
+    position: relative;
+
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(circle at top left, #ffd9ec, transparent 35%),
+        radial-gradient(circle at bottom right, #dcd1ff, transparent 40%),
+        linear-gradient(135deg, #fff4fa, #f2edff);
+}
+
+.zona-libro {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.zona-libro > h1 {
+    margin-bottom: 40px;
+
+    color: #4a2544;
+    font-size: 38px;
+}
+
+
+/* Botón volver */
+
+.boton-volver-sobres {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+    width: auto;
+    margin: 0;
+    padding: 12px 20px;
+
+    color: white;
+    font-weight: bold;
+
+    background: linear-gradient(135deg, #e85da8, #9272e8);
+    border: none;
+    border-radius: 14px;
+
+    cursor: pointer;
+}
+
+
+/* Libro cerrado */
+
+.libro-cerrado {
+    position: relative;
+
+    width: 350px;
+    height: 460px;
+
+    margin: 20px auto;
+
+    cursor: pointer;
+    perspective: 1200px;
+
+    transition: transform 0.4s ease;
+}
+
+.libro-cerrado:hover {
+    transform: translateY(-8px) rotate(-2deg);
+}
+
+.portada-libro {
+    position: absolute;
+    inset: 0;
+
+    padding: 45px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.15),
+            transparent
+        ),
+        linear-gradient(135deg, #dd599f, #8c65d8);
+
+    border-radius: 12px 26px 26px 12px;
+
+    border: 5px solid #6f438f;
+
+    box-shadow:
+        20px 20px 40px rgba(80, 45, 100, 0.28),
+        inset -12px 0 20px rgba(70, 34, 94, 0.22);
+
+    overflow: hidden;
+}
+
+.portada-libro::before {
+    content: "";
+
+    position: absolute;
+    inset: 18px;
+
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 10px 18px 18px 10px;
+}
+
+.portada-libro h2 {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 18px;
+
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.portada-libro p {
+    position: relative;
+    z-index: 2;
+
+    color: #fff1fa;
+    font-weight: bold;
+}
+
+.corazon-portada {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 25px;
+    font-size: 65px;
+}
+
+.lomo-libro {
+    position: absolute;
+
+    left: -15px;
+    top: 5px;
+
+    width: 35px;
+    height: 450px;
+
+    z-index: 3;
+
+    background: linear-gradient(
+        90deg,
+        #572d78,
+        #8851aa,
+        #572d78
+    );
+
+    border-radius: 10px 0 0 10px;
+
+    box-shadow: -8px 10px 18px rgba(65, 34, 80, 0.25);
+}
+
+
+/* Libro abierto */
+
+.libro-abierto {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+    min-height: 520px;
+
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 18px 1fr;
+
+    background: #8d5a3c;
+
+    border: 18px solid #875534;
+    border-radius: 24px;
+
+    box-shadow:
+        0 30px 55px rgba(74, 39, 86, 0.3),
+        inset 0 0 25px rgba(68, 34, 23, 0.4);
+
+    animation: abrirLibroAnimacion 0.8s ease;
+}
+
+.pagina {
+    position: relative;
+
+    min-height: 480px;
+    padding: 38px 35px;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 33px,
+            rgba(148, 107, 132, 0.12) 34px
+        ),
+        linear-gradient(135deg, #fffdf7, #fff7ea);
+
+    overflow: hidden;
+}
+
+.pagina-izquierda {
+    border-radius: 12px 4px 4px 12px;
+
+    box-shadow:
+        inset -18px 0 25px rgba(86, 55, 43, 0.12);
+}
+
+.pagina-derecha {
+    border-radius: 4px 12px 12px 4px;
+
+    box-shadow:
+        inset 18px 0 25px rgba(86, 55, 43, 0.12);
+}
+
+.pagina h2 {
+    margin-bottom: 20px;
+
+    color: #a34d78;
+    font-family: Georgia, serif;
+}
+
+.pagina textarea {
+    width: 100%;
+    height: 360px;
+
+    margin: 0;
+    padding: 14px;
+
+    color: #4d3042;
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: Georgia, serif;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 0;
+
+    outline: none;
+    resize: none;
+
+    box-shadow: none;
+}
+
+.pagina textarea:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.centro-libro {
+    position: relative;
+
+    background: linear-gradient(
+        90deg,
+        #d6bca7,
+        #8d6d5a,
+        #d6bca7
+    );
+
+    box-shadow:
+        inset 3px 0 5px rgba(255, 255, 255, 0.4),
+        inset -3px 0 5px rgba(44, 23, 15, 0.25);
+}
+
+
+/* Botón cerrar libro */
+
+.boton-cerrar-libro {
+    width: auto;
+
+    margin: 25px auto 0;
+    padding: 14px 28px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    background: linear-gradient(135deg, #e65ca6, #906ce3);
+    border: none;
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+
+
+/* Ocultar elementos */
+
+.oculto {
+    display: none !important;
+}
+
+
+/* Animación */
+
+@keyframes abrirLibroAnimacion {
+    from {
+        opacity: 0;
+        transform: scaleX(0.3) rotateX(15deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1) rotateX(0);
+    }
+}
+
+
+/* Diseño adaptable */
+
+@media (max-width: 800px) {
+
+    .libro-abierto {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+
+        border-width: 12px;
+    }
+
+    .centro-libro {
+        display: none;
+    }
+
+    .pagina {
+        min-height: 400px;
+    }
+
+    .pagina-izquierda {
+        border-radius: 12px 12px 0 0;
+    }
+
+    .pagina-derecha {
+        border-radius: 0 0 12px 12px;
+
+        border-top: 2px solid #dfcbb9;
+    }
+
+    .pagina textarea {
+        height: 280px;
+    }
+
+    .libro-cerrado {
+        width: 280px;
+        height: 380px;
+    }
+
+    .lomo-libro {
+        height: 370px;
+    }
+
+    .boton-sorpresa {
+        left: 15px;
+        bottom: 15px;
+    }
+}

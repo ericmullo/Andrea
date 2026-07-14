@@ -179,3 +179,41 @@ musica.play();
 
 }
 
+function mostrarLibro() {
+    const pantallaLibro = document.getElementById("pantallaLibro");
+
+    mostrarPantalla(pantallaLibro);
+}
+
+
+function volverASobres() {
+    const pantallaSobres = document.getElementById("pantallaSobres");
+
+    mostrarPantalla(pantallaSobres);
+}
+
+
+function abrirLibro() {
+    const libroCerrado = document.getElementById("libroCerrado");
+    const libroAbierto = document.getElementById("libroAbierto");
+    const botonCerrarLibro = document.getElementById(
+        "botonCerrarLibro"
+    );
+
+    libroCerrado.classList.add("oculto");
+    libroAbierto.classList.remove("oculto");
+    botonCerrarLibro.classList.remove("oculto");
+}
+
+
+function cerrarLibro() {
+    const libroCerrado = document.getElementById("libroCerrado");
+    const libroAbierto = document.getElementById("libroAbierto");
+    const botonCerrarLibro = document.getElementById(
+        "botonCerrarLibro"
+    );
+
+    libroAbierto.classList.add("oculto");
+    botonCerrarLibro.classList.add("oculto");
+    libroCerrado.classList.remove("oculto");
+}

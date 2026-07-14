@@ -29,7 +29,6 @@
         >
     </audio>
 
-
     <main class="contenedor">
 
         <!-- PANTALLA DE INICIO -->
@@ -40,9 +39,13 @@
 
             <div class="tarjeta">
 
-                <div class="icono">🔮</div>
+                <div class="icono">
+                    🔮
+                </div>
 
-                <h1>El misterio de la palabra</h1>
+                <h1>
+                    El misterio de la palabra
+                </h1>
 
                 <p>
                     Responde seis preguntas y descubre la palabra secreta.
@@ -52,6 +55,7 @@
                     id="nombreJugador"
                     type="text"
                     placeholder="Escribe tu nombre"
+                    autocomplete="off"
                 >
 
                 <button id="botonIngresar">
@@ -81,11 +85,10 @@
                     <span id="saludoJugador"></span>
 
                     <span id="numeroPregunta">
-                        Pregunta 1 de 5
+                        Pregunta 1 de 6
                     </span>
 
                 </div>
-
 
                 <div class="barra">
 
@@ -96,23 +99,19 @@
 
                 </div>
 
-
                 <h2 id="textoPregunta">
                     Cargando pregunta...
                 </h2>
-
 
                 <div
                     id="contenedorOpciones"
                     class="opciones"
                 ></div>
 
-
                 <p
                     id="mensajePregunta"
                     class="mensaje"
                 ></p>
-
 
                 <div class="palabra">
 
@@ -124,7 +123,6 @@
                     <span class="letra">_</span>
 
                 </div>
-
 
                 <div
                     id="zonaPalabra"
@@ -139,7 +137,9 @@
                         id="palabraJugador"
                         type="text"
                         maxlength="6"
+                        placeholder="Palabra secreta"
                         disabled
+                        autocomplete="off"
                     >
 
                     <button
@@ -169,9 +169,13 @@
 
             <div class="tarjeta victoria">
 
-                <div class="icono">🏆</div>
+                <div class="icono">
+                    🏆
+                </div>
 
-                <h1>¡Lo lograste!</h1>
+                <h1>
+                    ¡Lo lograste!
+                </h1>
 
                 <p id="textoVictoria"></p>
 
@@ -187,193 +191,307 @@
 
         </section>
 
-    </main>
+
+        <!-- PANTALLA DE SOBRES -->
+        <section
+            id="pantallaSobres"
+            class="pantalla pantalla-sobres"
+        >
+
+            <div class="contenido-sobres">
+
+                <h1>
+                    💕 Elige un sobre 💕
+                </h1>
+
+                <div class="contenedor-sobres">
+
+                    <!-- SOBRE 1 -->
+                    <button
+                        class="sobre"
+                        onclick="abrirSobre(this, 1)"
+                    >
+
+                        <span class="numero-sobre">
+                            1
+                        </span>
+
+                        <span class="icono-sobre">
+                            💌
+                        </span>
+
+                        <div class="contenido-sobre">
+
+                            <img
+                                src="pizza.jpeg"
+                                alt="Recuerdo de pizza"
+                            >
+
+                        </div>
+
+                    </button>
 
 
-    <!-- PANTALLA DE SOBRES -->
-    <section
-        id="pantallaSobres"
-        class="pantalla pantalla-sobres"
-    >
+                    <!-- SOBRE 2 -->
+                    <button
+                        class="sobre"
+                        onclick="abrirSobre(this, 2)"
+                    >
 
-        <div class="contenido-sobres">
+                        <span class="numero-sobre">
+                            2
+                        </span>
 
-            <h1>💕 Elige un sobre 💕</h1>
+                        <span class="icono-sobre">
+                            💌
+                        </span>
+
+                        <div class="carta">
+
+                            <h2>
+                                🎁 CUPÓN 🎁
+                            </h2>
+
+                            <p>
+                                Cupón válido para que me enseñes
+                                a jugar fútbol ⚽💗
+                            </p>
+
+                        </div>
+
+                    </button>
 
 
-            <div class="contenedor-sobres">
+                    <!-- SOBRE 3 -->
+                    <button
+                        class="sobre"
+                        onclick="abrirSobre(this, 3)"
+                    >
+
+                        <span class="numero-sobre">
+                            3
+                        </span>
+
+                        <span class="icono-sobre">
+                            💌
+                        </span>
+
+                        <div class="carta">
+
+                            <h2>
+                                📸 CUPÓN 📸
+                            </h2>
+
+                            <p>
+                                Cupón válido para tomarnos una
+                                foto juntos 📷💕
+                            </p>
+
+                        </div>
+
+                    </button>
 
 
-                <!-- SOBRE 1 -->
+                    <!-- SOBRE 4 -->
+                    <button
+                        class="sobre"
+                        onclick="abrirSobre(this, 4)"
+                    >
+
+                        <span class="numero-sobre">
+                            4
+                        </span>
+
+                        <span class="icono-sobre">
+                            💌
+                        </span>
+
+                        <div class="carta">
+
+                            <h2>
+                                🥞 CUPÓN 🥞
+                            </h2>
+
+                            <p>
+                                Cupón válido para unos
+                                crepes :3 💕
+                            </p>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- SOBRE 5 -->
+                    <button
+                        class="sobre"
+                        onclick="abrirSobre(this, 5)"
+                    >
+
+                        <span class="numero-sobre">
+                            5
+                        </span>
+
+                        <span class="icono-sobre">
+                            💌
+                        </span>
+
+                        <div class="carta">
+
+                            <h2>
+                                💕 CUPÓN 💕
+                            </h2>
+
+                            <p>
+                                Próxima sorpresa... :3 💗
+                            </p>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- SOBRE 6 -->
+                    <button
+                        class="sobre"
+                        onclick="abrirSobre(this, 6)"
+                    >
+
+                        <span class="numero-sobre">
+                            6
+                        </span>
+
+                        <span class="icono-sobre">
+                            💌
+                        </span>
+
+                        <div class="carta">
+
+                            <h2>
+                                📸 CUPÓN 📸
+                            </h2>
+
+                            <p>
+                                Próximos recuerdos... :3 📷💕
+                            </p>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
                 <button
-                    class="sobre"
-                    onclick="abrirSobre(this, 1)"
+                    type="button"
+                    class="boton-sorpresa"
+                    onclick="mostrarLibro()"
                 >
-
-                    <span class="numero-sobre">
-                        1
-                    </span>
-
-                    <span class="icono-sobre">
-                        💌
-                    </span>
-
-                    <div class="contenido-sobre">
-
-                        <img
-                            src="pizza.jpeg"
-                            alt="Recuerdo de pizza"
-                        >
-
-                    </div>
-
+                    ✨ Botón sorpresa
                 </button>
-
-
-                <!-- SOBRE 2 -->
-                <button
-                    class="sobre"
-                    onclick="abrirSobre(this, 2)"
-                >
-
-                    <span class="numero-sobre">
-                        2
-                    </span>
-
-                    <span class="icono-sobre">
-                        💌
-                    </span>
-
-                    <div class="carta">
-
-                        <h2>🎁 CUPÓN 🎁</h2>
-
-                        <p>
-                            Cupón válido para que me enseñes
-                            a jugar fútbol ⚽💗
-                        </p>
-
-                    </div>
-
-                </button>
-
-
-                <!-- SOBRE 3 -->
-                <button
-                    class="sobre"
-                    onclick="abrirSobre(this, 3)"
-                >
-
-                    <span class="numero-sobre">
-                        3
-                    </span>
-
-                    <span class="icono-sobre">
-                        💌
-                    </span>
-
-                    <div class="carta">
-
-                        <h2>📸 CUPÓN 📸</h2>
-
-                        <p>
-                            Cupón válido para tomarnos una
-                            foto juntos 📷💕
-                        </p>
-
-                    </div>
-
-                </button>
-
-
-                <!-- SOBRE 4 -->
-                <button
-                    class="sobre"
-                    onclick="abrirSobre(this, 4)"
-                >
-
-                    <span class="numero-sobre">
-                        4
-                    </span>
-
-                    <span class="icono-sobre">
-                        💌
-                    </span>
-
-                    <div class="carta">
-
-                        <h2>🥞 CUPÓN 🥞</h2>
-
-                        <p>
-                            Cupón válido para unos
-                            Crepes :3 💕
-                        </p>
-
-                    </div>
-
-                </button>
-
-
-                <!-- SOBRE 5 -->
-                <button
-                    class="sobre"
-                    onclick="abrirSobre(this, 5)"
-                >
-
-                    <span class="numero-sobre">
-                        5
-                    </span>
-
-                    <span class="icono-sobre">
-                        💌
-                    </span>
-
-                    <div class="carta">
-
-                        <h2>💕 CUPÓN 💕</h2>
-
-                        <p>
-                            Próxima sorpresa... :3 💗
-                        </p>
-
-                    </div>
-
-                </button>
-
-
-                <!-- SOBRE 6 -->
-                <button
-                    class="sobre"
-                    onclick="abrirSobre(this, 6)"
-                >
-
-                    <span class="numero-sobre">
-                        6
-                    </span>
-
-                    <span class="icono-sobre">
-                        💌
-                    </span>
-
-                    <div class="carta">
-
-                        <h2>📸 CUPÓN 📸</h2>
-
-                        <p>
-                            Próximos recuerdos... :3 📷💕
-                        </p>
-
-                    </div>
-
-                </button>
-
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
 
+        <!-- PANTALLA DEL LIBRO -->
+        <section
+            id="pantallaLibro"
+            class="pantalla pantalla-libro"
+        >
+
+            <button
+                type="button"
+                class="boton-volver-sobres"
+                onclick="volverASobres()"
+            >
+                ← Volver
+            </button>
+
+            <div class="zona-libro">
+
+                <h1>
+                    📖 Nuestro libro secreto 📖
+                </h1>
+
+                <!-- LIBRO CERRADO -->
+                <div
+                    id="libroCerrado"
+                    class="libro-cerrado"
+                    onclick="abrirLibro()"
+                >
+
+                    <div class="lomo-libro"></div>
+
+                    <div class="portada-libro">
+
+                        <span class="corazon-portada">
+                            💗
+                        </span>
+
+                        <h2>
+                            Nuestros recuerdos
+                        </h2>
+
+                        <p>
+                            Toca para abrir
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LIBRO ABIERTO -->
+                <div
+                    id="libroAbierto"
+                    class="libro-abierto oculto"
+                >
+
+                    <div class="pagina pagina-izquierda">
+
+                        <h2>
+                            Página 1
+                        </h2>
+
+                        <textarea
+                            id="textoPagina1"
+                            placeholder="Escribe aquí algo bonito..."
+                        ></textarea>
+
+                    </div>
+
+                    <div class="centro-libro"></div>
+
+                    <div class="pagina pagina-derecha">
+
+                        <h2>
+                            Página 2
+                        </h2>
+
+                        <textarea
+                            id="textoPagina2"
+                            placeholder="Continúa escribiendo aquí..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+                <button
+                    id="botonCerrarLibro"
+                    type="button"
+                    class="boton-cerrar-libro oculto"
+                    onclick="cerrarLibro()"
+                >
+                    📕 Cerrar libro
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
 
     <script src="juego.js"></script>
 
