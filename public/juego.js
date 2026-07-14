@@ -179,33 +179,3 @@ musica.play();
 
 }
 
-function opcion1(event){
-
-    event.stopPropagation();
-
-    alert("Elegiste la opción 1 💕");
-
-}
-
-function opcion2(event){
-
-    event.stopPropagation();
-
-    alert("Elegiste la opción 2 💕");
-
-}
-function elegirOpcion(event, opcion){
-
-    event.stopPropagation();
-
-    if(opcion===1){
-
-        alert("Elegiste la opción 1");
-
-    }else{
-
-        alert("Elegiste la opción 2");
-
-    }
-
-}
