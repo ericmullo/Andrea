@@ -414,6 +414,7 @@
                     📖 Nuestro libro secreto 📖
                 </h1>
 
+
                 <!-- LIBRO CERRADO -->
                 <div
                     id="libroCerrado"
@@ -443,128 +444,110 @@
 
 
                 <!-- LIBRO ABIERTO -->
-               <div
-    id="libroAbierto"
-    class="libro-abierto oculto"
->
+                <div
+                    id="libroAbierto"
+                    class="libro-abierto oculto"
+                >
 
-    <!-- Página izquierda -->
-    <div
-        id="paginaIzquierda"
-        class="pagina pagina-izquierda"
-    >
+                    <!-- PÁGINA IZQUIERDA -->
+                    <div
+                        id="paginaIzquierda"
+                        class="pagina pagina-izquierda"
+                    >
 
-        <h2 id="tituloPaginaIzquierda">
-            Página 1
-        </h2>
-
-        <textarea
-            id="textoPaginaIzquierda"
-            placeholder="Escribe aquí..."
-        ></textarea>
-
-        <span
-            id="numeroPaginaIzquierda"
-            class="numero-pagina-libro"
-        >
-            1
-        </span>
-
-    </div>
-
-
-    <div class="centro-libro"></div>
-
-
-    <!-- Página derecha -->
-    <div
-        id="paginaDerecha"
-        class="pagina pagina-derecha"
-    >
-
-        <h2 id="tituloPaginaDerecha">
-            Página 2
-        </h2>
-
-        <textarea
-            id="textoPaginaDerecha"
-            placeholder="Continúa escribiendo aquí..."
-        ></textarea>
-
-        <span
-            id="numeroPaginaDerecha"
-            class="numero-pagina-libro"
-        >
-            2
-        </span>
-
-    </div>
-
-</div>
-
-
-<div
-    id="controlesLibro"
-    class="controles-libro oculto"
->
-
-    <button
-        id="botonPaginaAnterior"
-        type="button"
-        onclick="paginaAnterior()"
-    >
-        ← Página anterior
-    </button>
-
-    <span id="indicadorPaginas">
-        Páginas 1 - 2 de 30
-    </span>
-
-    <button
-        id="botonPaginaSiguiente"
-        type="button"
-        onclick="paginaSiguiente()"
-    >
-        Página siguiente →
-    </button>
-
-</div>
-
-
-<p
-    id="estadoGuardado"
-    class="estado-guardado oculto"
->
-    Todo guardado 💗
-</p>
-
-                        <h2>
+                        <h2 id="tituloPaginaIzquierda">
                             Página 1
                         </h2>
 
                         <textarea
-                            id="textoPagina1"
-                            placeholder="Escribe aquí algo bonito..."
+                            id="textoPaginaIzquierda"
+                            placeholder="Escribe aquí un recuerdo bonito..."
                         ></textarea>
+
+                        <span
+                            id="numeroPaginaIzquierda"
+                            class="numero-pagina-libro"
+                        >
+                            1
+                        </span>
 
                     </div>
 
+
                     <div class="centro-libro"></div>
 
-                    <div class="pagina pagina-derecha">
 
-                        <h2>
+                    <!-- PÁGINA DERECHA -->
+                    <div
+                        id="paginaDerecha"
+                        class="pagina pagina-derecha"
+                    >
+
+                        <h2 id="tituloPaginaDerecha">
                             Página 2
                         </h2>
 
                         <textarea
-                            id="textoPagina2"
+                            id="textoPaginaDerecha"
                             placeholder="Continúa escribiendo aquí..."
                         ></textarea>
+
+                        <span
+                            id="numeroPaginaDerecha"
+                            class="numero-pagina-libro"
+                        >
+                            2
+                        </span>
 
                     </div>
 
                 </div>
+
+
+                <!-- CONTROLES DE PÁGINAS -->
+                <div
+                    id="controlesLibro"
+                    class="controles-libro oculto"
+                >
+
+                    <button
+                        id="botonPaginaAnterior"
+                        type="button"
+                    >
+                        ← Página anterior
+                    </button>
+
+                    <span id="indicadorPaginas">
+                        Páginas 1 - 2 de 30
+                    </span>
+
+                    <button
+                        id="botonPaginaSiguiente"
+                        type="button"
+                    >
+                        Página siguiente →
+                    </button>
+
+                </div>
+
+
+                <!-- BOTÓN PARA GUARDAR -->
+                <button
+                    id="botonGuardarLibro"
+                    type="button"
+                    class="boton-guardar-libro oculto"
+                >
+                    💾 Guardar páginas
+                </button>
+
+
+                <p
+                    id="estadoGuardado"
+                    class="estado-guardado oculto"
+                >
+                    Todo guardado 💗
+                </p>
+
 
                 <button
                     id="botonCerrarLibro"
