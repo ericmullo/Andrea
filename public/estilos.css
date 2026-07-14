@@ -913,3 +913,127 @@ button:disabled {
         bottom: 15px;
     }
 }
+/* Controles de las páginas */
+
+.controles-libro {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 24px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.controles-libro button {
+    width: auto;
+    margin: 0;
+    padding: 12px 20px;
+}
+
+#indicadorPaginas {
+    min-width: 170px;
+
+    color: #63395a;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Número inferior de página */
+
+.numero-pagina-libro {
+    position: absolute;
+    bottom: 15px;
+
+    color: #9d728b;
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+.pagina-izquierda .numero-pagina-libro {
+    left: 25px;
+}
+
+.pagina-derecha .numero-pagina-libro {
+    right: 25px;
+}
+
+
+/* Estado de guardado */
+
+.estado-guardado {
+    margin-top: 15px;
+
+    color: #33845f;
+    font-weight: bold;
+}
+
+
+/* Animación al avanzar */
+
+.libro-abierto.pasando-siguiente {
+    animation: pasarPaginaSiguiente 0.55s ease;
+}
+
+.libro-abierto.pasando-anterior {
+    animation: pasarPaginaAnterior 0.55s ease;
+}
+
+@keyframes pasarPaginaSiguiente {
+    0% {
+        transform: perspective(1300px) rotateY(0deg);
+        opacity: 1;
+    }
+
+    45% {
+        transform: perspective(1300px) rotateY(-12deg);
+        opacity: 0.55;
+    }
+
+    100% {
+        transform: perspective(1300px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes pasarPaginaAnterior {
+    0% {
+        transform: perspective(1300px) rotateY(0deg);
+        opacity: 1;
+    }
+
+    45% {
+        transform: perspective(1300px) rotateY(12deg);
+        opacity: 0.55;
+    }
+
+    100% {
+        transform: perspective(1300px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+
+/* Evitar mover páginas mientras cambia */
+
+.libro-abierto.cambiando-pagina {
+    pointer-events: none;
+}
+
+
+/* En celular */
+
+@media (max-width: 800px) {
+    .controles-libro {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .controles-libro button {
+        width: 100%;
+        max-width: 320px;
+    }
+}
